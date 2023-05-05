@@ -222,58 +222,23 @@ Author URL: http://w3layouts.com
   <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
 
   <!-- To send email -->
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
 
-<script>
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        if (validateForm()) {
-            sendEmail();
-        }
-    });
+  <script>
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "akomolafeayoyinka@gmail.com",
+    Password : "yinkus1994",
+    To : 'akomolafeayoyinka@gmail.com',
+    From : "burinious web solutions",
+    Subject : "Contact form Entry",
+    Body : "email body"
+}).then(
+  message => alert(message)
+);
 
-    function validateForm() {
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (name === '' || email === '' || message === '') {
-            alert('Please fill out all required fields.');
-            return false;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return false;
-        }
-
-        return true;
-    }
-
-    function sendEmail() {
-  const xhr = new XMLHttpRequest();
-  const url = 'https://formspree.io/f//mjvdjgje'; // Replace {YOUR_EMAIL_ADDRESS} with your actual email address
-  const formData = new FormData(form);
-
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-          alert('Thank you for contacting us!');
-          form.reset();
-          return false;
-      }
-  };
-
-  xhr.open('POST', url);
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.send(new URLSearchParams(formData).toString());
-}
-    
 </script>
-
-
-
-
 
   <!-- /typig-text-->
   <script>
