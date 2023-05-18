@@ -118,23 +118,8 @@ Author URL: http://w3layouts.com
               </div>
             </div>
           </div>
+
           <div class="map-content-9">
-            <!-- <form action="https://formspree.io/f/mjvdjgje" method="POST">
-              <div class="twice-two">
-                <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name" required="">
-                <input type="email" class="form-control" name="w3lSender" id="w3lSender" placeholder="Email"
-                  required="">
-              </div>
-              <div class="twice">
-                <input type="text" class="form-control" name="w3lSubject" id="w3lSubject" placeholder="Subject"
-                  required="">
-              </div>
-              <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
-                required=""></textarea>
-              <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
-              </div>
-            </form> -->
 
             <form id="contact-form" method="post">
               <div class="form-group">
@@ -156,6 +141,7 @@ Author URL: http://w3layouts.com
             </form>
 
           </div>
+
         </div>
       </div>
     </div>
@@ -225,10 +211,10 @@ Author URL: http://w3layouts.com
   <script src="assets/js/jquery-3.3.1.min.js"></script><!-- default jQuery -->
 
   <!-- To send email -->
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <script>
+
+  <!-- <script>
     Email.send({
       Host: "smtp.gmail.com",
       Username: "akomolafeayoyinka@gmail.com",
@@ -240,7 +226,19 @@ Author URL: http://w3layouts.com
     }).then(
       message => alert(message)
     );
-  </script>
+  </script> -->
+
+  <script type="text/javascript">
+    Email.send({
+  SecureToken : "014bf127-69ba-4112-b60e-721a7bf94f2a",
+  To : 'them@website.com',
+  From : "akomolafeayoyinka@gmail.com",
+  Subject : "Contact form Entry",
+  Body : "email body"
+}).then(
+message => alert(message)
+);
+</script> 
 
   <!-- /typig-text-->
   <script>
