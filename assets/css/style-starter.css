@@ -9952,11 +9952,11 @@ header {
   padding: 0; }
 
 .navbar .navbar-brand {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-size: 34px;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: none;
   color: var(--primary-color); }
 
 .navbar .navbar-brand span.fa {
@@ -10216,9 +10216,9 @@ nav ul li a:hover {
   .navbar-brand img {
     max-width: 200px; }
   .navbar .navbar-brand {
-    font-size: 30px; }
+    font-size: 25px; }
   .mobile-position {
-    top: 10px; } }
+    top: 5px; } }
 
 .w3l-banner {
   margin-top: 90px;
@@ -10424,6 +10424,17 @@ span.cursor {
   margin: 0;
   padding: 40px 30px;
   position: relative;
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  border: none;
+  box-shadow: 0 25px 98px 0 rgba(19, 19, 19, 0.03); }
+.projects{
+  display: block;
+  margin: 2rem;
+  padding: 40px 30px;
   background: var(--bg-light);
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
