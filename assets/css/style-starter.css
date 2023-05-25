@@ -3351,7 +3351,7 @@ input[type="button"].btn-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  max-width: 32rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -3378,6 +3378,10 @@ input[type="button"].btn-block {
 .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0; }
+  .card-text {
+    margin-bottom: 1rem;
+    font-size: 1rem; 
+  }
 
 .card-text:last-child {
   margin-bottom: 0; }
@@ -3429,6 +3433,10 @@ input[type="button"].btn-block {
   flex-shrink: 0;
   width: 100%; }
 
+  .card-img-top {
+height: 25rem;
+
+  }
 .card-img,
 .card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
